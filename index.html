@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Online Notepad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 90vh;
+      font-size: 16px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 My Online Notepad</h1>
+  <textarea id="editor" placeholder="Start typing..."></textarea>
+
+  <script>
+    const textarea = document.getElementById('editor');
+
+    // Load saved note on startup
+    textarea.value = localStorage.getItem('myNote') || '';
+
+    // Save note on every keystroke
+    textarea.addEventListener('input', () => {
+      localStorage.setItem('myNote', textarea.value);
+    });
+  </script>
+</body>
+</html>
