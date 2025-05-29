@@ -43,3 +43,25 @@
   </script>
 </body>
 </html>
+npm install firebase
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBbi2Ynf33rsifHWr1wTddFAdaRFMI32Gc",
+  authDomain: "my-notepad-d245b.firebaseapp.com",
+  projectId: "my-notepad-d245b",
+  storageBucket: "my-notepad-d245b.firebasestorage.app",
+  messagingSenderId: "618057714177",
+  appId: "1:618057714177:web:6c0b75f0e039cc9741ce00",
+  measurementId: "G-W7GCC45Y60"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
